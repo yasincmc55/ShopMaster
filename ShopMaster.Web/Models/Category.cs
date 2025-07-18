@@ -9,8 +9,7 @@ namespace ShopMaster.Web.Models
         [Required]
         public string Name { get; set; }
         public int DisplayOrder { get; set; }
-
-        public bool Status { get; set; }
+        public bool Status { get; set; } = true;
 
     }
 }
