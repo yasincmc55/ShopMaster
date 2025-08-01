@@ -15,6 +15,11 @@ namespace ShopMaster.Web.Controllers
         public IActionResult Index()
         {
             List<Category> objectCategoryList = _db.Categories.ToList();
+            return View(objectCategoryList);
+        }
+
+        public IActionResult Create()
+        {
             return View();
         }
     }
