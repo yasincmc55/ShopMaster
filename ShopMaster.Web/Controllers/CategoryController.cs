@@ -36,6 +36,7 @@ namespace ShopMaster.Web.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
 
@@ -70,20 +71,48 @@ namespace ShopMaster.Web.Controllers
                 ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the Category Name");
             }
 
-            bool isDuplicateDisplayOrder = _db.Categories.Any(c => c.DisplayOrder == obj.DisplayOrder && c.Id != obj.Id);
-            if (isDuplicateDisplayOrder)
-            {
-                ModelState.AddModelError("DisplayOrder", "This order is already assigned to another category");
-            }
-
             if (ModelState.IsValid)
             {
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index");
             }
 
             return View();
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if(id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Category? category = _db.Categories.Find(id);
+
+            if(category == null)
+            {
+                return NotFound();
+            }
+
+            return View(category);
+        }
+        //burada formda action kısmını DeletePOST değil Delete şeklinde veriyoruz
+        [HttpPost,ActionName("Delete")] 
+        public IActionResult DeletePOST(int id)
+        {
+            var category = _db.Categories.Find(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            _db.Categories.Remove(category);
+            _db.SaveChanges();
+            TempData["success"] = "Category deleted successfully";
+
+            return RedirectToAction("Index");
         }
 
     }
