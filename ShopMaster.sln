@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMaster.Web", "ShopMaster.Web\ShopMaster.Web.csproj", "{1B68C0BA-CFC5-444F-A8B6-FB109C6DD562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMaster.Web", "ShopMaster.Web\ShopMaster.Web.csproj", "{1B68C0BA-CFC5-444F-A8B6-FB109C6DD562}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopmaster_Temp", "Shopmaster_Temp\Shopmaster_Temp.csproj", "{82FE231C-CDE9-40F5-92DA-13522F67BB22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1B68C0BA-CFC5-444F-A8B6-FB109C6DD562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B68C0BA-CFC5-444F-A8B6-FB109C6DD562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B68C0BA-CFC5-444F-A8B6-FB109C6DD562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82FE231C-CDE9-40F5-92DA-13522F67BB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82FE231C-CDE9-40F5-92DA-13522F67BB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82FE231C-CDE9-40F5-92DA-13522F67BB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82FE231C-CDE9-40F5-92DA-13522F67BB22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
