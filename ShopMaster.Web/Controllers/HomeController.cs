@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ShopMaster.Web.Models;
+using ShopMaster.Models;
 using System.Diagnostics;
 
 namespace ShopMaster.Web.Controllers

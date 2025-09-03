@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ShopMaster.Web.Data;
+using ShopMaster.DataAccess.Data;
+
 
 #nullable disable
 
-namespace ShopMaster.Web.Migrations
+namespace ShopMaster.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250718091830_AddCategoryTableToDb")]
