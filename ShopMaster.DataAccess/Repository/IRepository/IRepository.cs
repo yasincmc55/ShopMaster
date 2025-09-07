@@ -11,7 +11,7 @@ namespace ShopMaster.DataAccess.Repository.IRepository
     //burada şunu yapıyoruz herhangi bir tablo yani entity için ortak bir CRUD arayüzü oluşturuyoruz
     //bu şekilde T yerine Catagory de gelebelir Product da gelebilir tek bir arayüz üzerinden hepsi için ortak
     //bir çatı oluşturuyoruz
-    internal interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         //T-Category
         IEnumerable<T> GetAll();
@@ -23,7 +23,7 @@ namespace ShopMaster.DataAccess.Repository.IRepository
     }
 }
 
-/*
+/* 
  *  Burada:
 
     T → Category
